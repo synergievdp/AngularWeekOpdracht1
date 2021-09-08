@@ -1,1 +1,17 @@
-<p>calculator works!</p>
+<div>
+    <label></label>
+    <label></label>
+</div>
+<div class="calculator">
+    <button class="clear">C</button>
+    <button>del</button>
+    <div class="numbers">
+        <button *ngFor="let n of buttons; index as i">{{n}}</button>
+    </div>
+    <div class="operators">
+        <button *ngFor="let n of operators; index as i">{{n}}</button>
+    </div>
+    <button class="decimal">,</button>
+    <button class="zero">0</button>
+    <button class="equals">=</button>
+</div>

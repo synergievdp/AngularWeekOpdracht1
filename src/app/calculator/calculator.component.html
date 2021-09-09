@@ -1,17 +1,18 @@
-<div>
-    <label></label>
-    <label></label>
-</div>
 <div class="calculator">
-    <button class="clear">C</button>
-    <button>del</button>
-    <div class="numbers">
-        <button *ngFor="let n of buttons; index as i">{{n}}</button>
+    <label>{{outputDisplay}}</label>
+    <label>{{input}}</label>
+        <button class="clear" (click)="onClear()">C</button>
+        <button class="del" (click)="onDelete()">del</button>
+        <div class="numbers">
+            <button *ngFor="let n of buttons; index as i" (click)="onNumber(n)">{{n}}</button>
+        </div>
+        <div class="operators">
+            <button *ngFor="let n of operators; index as i" (click)="onOperator(n)">{{n}}</button>
+        </div>
+        <button class="decimal" (click)="onDecimal()">{{decimalSeparator}}</button>
+        <button class="zero" (click)="onNumber(0)">0</button>
+        <button class="equals" (click)="onEquals()">=</button>
     </div>
-    <div class="operators">
-        <button *ngFor="let n of operators; index as i">{{n}}</button>
-    </div>
-    <button class="decimal">,</button>
-    <button class="zero">0</button>
-    <button class="equals">=</button>
-</div>
+<ul>
+    <li *ngFor="let n of history">{{n}}</li>
+</ul>

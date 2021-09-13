@@ -10,6 +10,11 @@ button {
     display: grid;
     grid-template-columns: 50px 50px 50px 50px;
     grid-template-rows: auto auto 50px 50px 50px 50px 50px;
+
+    button:hover {
+        filter: brightness(0.5);
+    }
+    
     label {
         grid-column: 1 / 5;
         background-color: white;
